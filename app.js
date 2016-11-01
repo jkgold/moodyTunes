@@ -5,6 +5,8 @@
       // var s = new Spotify();
       // var spotifyApi = new SpotifyWebApi();
       // spotifyApi.setAccessToken('<5725c2b0a5e24169b8d5381c4e17af67>');
+      //     "target_uri": "spotify:track:3SVAN3BRByDmHOhKyIDxfC",
+
       $('#btn').on('click', function(event){
         event.preventDefault();
 
@@ -19,20 +21,20 @@
         var userInput = $("#query").val();
         for (var i = 0; i < userInput.length; i++){
           if(userInput[i] === " "){
-            console.log(userInput.split(' ').join("+"));
+            userInput = userInput.split(' ').join("+");
+            console.log(userInput);
           }
 
           }
         // }
         // console.log("user input;", userInput);
-        var $userApi = "https://api.spotify.com/v1/search?q=" +`${userInput}` + "%20&type=artist";
+        var $userApi = "https://api.spotify.com/v1/search?q=" + userInput + "%20&type=artist";
         console.log($userApi);
-        // var $userApi = "https://api.spotify.com/v1/albums/'0ADkBHZhR2cVfANgK5gHQO'/tracks";
-        // // $userApi += $userInput.val();
-        $.getJSON($userApi)
-        .then(function(data){
+
+        // $.getJSON($userApi)
+        // .then(function(data){
           // console.log('data=======',data);
         })
 
-      })
+      // })
 });
