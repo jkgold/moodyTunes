@@ -10,31 +10,29 @@
       $('#btn').on('click', function(event){
         event.preventDefault();
 
-        // console.log('clicked!!');
-        // event.preventDefault();
-        // var $userInput = $('input');
-        // if ($userInput.val()===""){
-        //   console.log("Yo Mama");
-        //   return;
-        // }
-        // function multiWords(userName){
+
         var userInput = $("#query").val();
         for (var i = 0; i < userInput.length; i++){
           if(userInput[i] === " "){
             userInput = userInput.split(' ').join("+");
-            console.log(userInput);
+
           }
 
           }
-        // }
-        // console.log("user input;", userInput);
+
+
         var $userApi = "https://api.spotify.com/v1/search?q=" + userInput + "%20&type=artist";
         console.log($userApi);
+        // console.log($('external_urls:').val());
+        // console.log($userApi.artists);
 
-        // $.getJSON($userApi)
-        // .then(function(data){
-          // console.log('data=======',data);
+          $.getJSON($userApi)
+        .then(function(data){
+          var itemsValue = data.artists.items;
+          // console.log(itemsValue.external_urls);
+          console.log($("external_urls"));
+
         })
 
-      // })
+      })
 });
