@@ -32,7 +32,11 @@
         var itemsValue = data;
         var topFive = itemsValue.artists.items[0].external_urls;
         var playlistTopFive = topFive.spotify;
-        console.log(playlistTopFive);
+        // console.log(playlistTopFive);
+         var stringPlayListTopFive = JSON.stringify(playlistTopFive);
+         // only isolates the first number
+         var regex =/\d/;
+         console.log(stringPlayListTopFive.match(regex));
 
 
 
