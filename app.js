@@ -2,11 +2,11 @@
     $(document).ready(function(){
       $('#btn').on('click', function(event){
         event.preventDefault();
-        var artistId= "";
+        var artistId= " ";
         function addElement(){
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
-          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/" + artistId);
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/") // + function here;
           console.log(newDiv);
         }
         addElement();
@@ -15,10 +15,9 @@
         for (var i = 0; i < userInput.length; i++){
           if(userInput[i] === " "){
             userInput = userInput.split(' ').join("+");
-
           }
 
-          }
+        }
 
 
         var $userApi = "https://api.spotify.com/v1/search?q=" + userInput + "%20&type=artist";
