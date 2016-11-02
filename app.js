@@ -13,7 +13,7 @@
         function addElement(){
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
-          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb");
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/4" + $playlistTopFive);
           console.log(newDiv);
         }
         addElement();
