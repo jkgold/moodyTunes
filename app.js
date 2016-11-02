@@ -35,17 +35,17 @@
         // console.log(playlistTopFive);
       //    var stringList = JSON.stringify(playlistTopFive);
       //    console.log(stringList);
-      //  console.log(playlistTopFive);
+       console.log(playlistTopFive);
        var removeUrl = 'https://embed.spotify.com/?uri=/open.spotify.com/artist/';
        var returnKey =
       playlistTopFive.replace(removeUrl, '');
-      console.log(returnKey );
-      function cutOffUrl (removeUrl, playlistTopFive){
+      // console.log(returnKey );
+      // function cutOffUrl (removeUrl, playlistTopFive){
         var returnKey =
        playlistTopFive.replace(removeUrl, '');
-       console.log(returnKey);
-      }
-      cutOffUrl();
+      //  console.log(returnKey);
+      // }
+      // cutOffUrl();
 
       //  'https://embed.spotify.com/?uri=/open.spotify.com/artist/3NZE8jDD2cCzd4vUyZ5CQQ'.replace(removeUrl,'')
       //  "3NZE8jDD2cCzd4vUyZ5CQQ"
