@@ -10,7 +10,7 @@
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
           newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/3NZE8jDD2cCzd4vUyZ5CQQ");
-          console.log(newDiv);
+          // console.log(newDiv);
         }
         addElement();
 
@@ -29,15 +29,31 @@
 
       $.getJSON($userApi)
       .then(function(data){
-        var itemsValue = data;
-        var topFive = itemsValue.artists.items[0].external_urls;
-        var playlistTopFive = topFive.spotify;
-        // console.log(playlistTopFive);
-         var stringPlayListTopFive = JSON.stringify(playlistTopFive);
-         // only isolates the first number
-         var regex =/\d/;
-         console.log(stringPlayListTopFive.match(regex));
+        console.log(playlistTopFive);
+         var stringList = JSON.stringify(playlistTopFive);
+      //    console.log(stringList);
+      //  console.log(playlistTopFive);
 
+      //  var returnKey =
+      // playlistTopFive.replace(removeUrl, '');
+      // console.log(returnKey );
+      // console.log(typeof playlistTopFive );
+      // function cutOffUrl (removeUrl, playlistTopFive){
+      // playlistTopFive.replace(removeUrl, '');
+      //   var returnKey =
+      //  console.log(returnKey, "Hello World");
+      // }
+      var playlistTopFive = topFive.spotify;
+      var itemsValue = data;
+      var topFive = itemsValue.artists.items[0].external_urls;
+      var removeUrl = 'https://embed.spotify.com/?uri=/open.spotify.com/artist/';
+      var urlTotalLength = playlistTopFive.length;
+      var startPoint = removeUrl.length;
+      var artistID = playlistTopFive.substring(startPoint, urlTotalLength);
+      console.log(artistID);
+
+      //  'https://embed.spotify.com/?uri=/open.spotify.com/artist/3NZE8jDD2cCzd4vUyZ5CQQ'.replace(removeUrl,'')
+      // //  "3NZE8jDD2cCzd4vUyZ5CQQ"
 
 
       })
