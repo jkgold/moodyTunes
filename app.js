@@ -22,17 +22,14 @@
 
 
         var $userApi = "https://api.spotify.com/v1/search?q=" + userInput + "%20&type=artist";
-        // console.log($userApi);
-        // console.log($('external_urls:').val());
-        // console.log($userApi.artists);
+      //
 
           $.getJSON($userApi)
         .then(function(data){
           var itemsValue = data;
-          // console.log(itemsValue.artists);
-          // console.log(itemsValue.artists.items);
           var topFive = itemsValue.artists.items[0].external_urls;
-          console.log(topFive);
+          var playlistTopFive = topFive.spotify;
+          console.log(playlistTopFive);
 
 
 
