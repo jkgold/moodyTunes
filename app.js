@@ -10,6 +10,13 @@
       $('#btn').on('click', function(event){
         event.preventDefault();
 
+        function addElement(){
+          var newDiv = document.createElement("iframe");
+          $(".inner").append(newDiv);
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb");
+          console.log(newDiv);
+        }
+        addElement();
 
         var userInput = $("#query").val();
         for (var i = 0; i < userInput.length; i++){
