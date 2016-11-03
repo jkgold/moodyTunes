@@ -1,5 +1,6 @@
 
     $(document).ready(function(){
+      //  $('.parallax').parallax();
       $('#btn').on('click', function(event){
         event.preventDefault();
         var artistId= " ";
