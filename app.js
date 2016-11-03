@@ -3,13 +3,14 @@
       $('#btn').on('click', function(event){
         event.preventDefault();
         var artistId= " ";
+
         function addElement(){
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
-          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/") // + function here;
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/" + addArtistIdToDiv());
           console.log(newDiv);
         }
-        addElement();
+        // addElement();
 
         var userInput = $("#query").val();
         for (var i = 0; i < userInput.length; i++){
@@ -33,9 +34,17 @@
        var removeUrl = 'https://open.spotify.com/artist/';
        var returnKey =
       playlistTopFive.replace(removeUrl, '');
-      console.log(returnKey);
+      // console.log(returnKey);
        artistId = returnKey;
-      console.log(artistId);
+      // console.log(artistId);
+      var newDiv = document.createElement("iframe");
+      $(".inner").append(newDiv);
+      newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/" + artistId);
+
+      function addArtistIdToDiv () {
+        return artistId;
+      }
+      console.log(addArtistIdToDiv());
 
 
         })
