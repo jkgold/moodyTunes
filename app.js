@@ -4,11 +4,11 @@
       $('#btn').on('click', function(event){
         event.preventDefault();
         var artistId= " ";
-
+// <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
         function addElement(){
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
-          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=/open.spotify.com/artist/" + addArtistIdToDiv());
+          newDiv.setAttribute("src", 'https://embed.spotify.com/?uri=/open.spotify.com/artist/' + 'width="300" height="380" frameborder="0" allowtransparency="true"' + addArtistIdToDiv());
           console.log(newDiv);
         }
         // addElement();
