@@ -2,16 +2,18 @@
     $(document).ready(function(){
       //  $('.parallax').parallax();
       $('#btn').on('click', function(event){
+        console.log("");
         event.preventDefault();
-        var artistId= " ";
-// <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+
         function addElement(){
           var newDiv = document.createElement("iframe");
           $(".inner").append(newDiv);
-          newDiv.setAttribute("src", 'https://embed.spotify.com/?uri=/open.spotify.com/artist/' + 'width="300" height="380" frameborder="0" allowtransparency="true"' + addArtistIdToDiv());
+          newDiv.setAttribute("src", 'https://embed.spotify.com/?uri=/open.spotify.com/artist/' + addArtistIdToDiv() + 'width="300" height="380" frameborder="0" allowtransparency="true"' );
           console.log(newDiv);
         }
-        // addElement();
+
+
 
         var userInput = $("#query").val();
         for (var i = 0; i < userInput.length; i++){
@@ -51,4 +53,18 @@
         })
 
       })
+      //--Happy--//
+      $('#happy').on('click', function(event){
+        console.log("clicked");
+        // console.log(event.preventDefault());
+
+         function addElementHappy(){
+          var newDivHappy = document.createElement("iframe");
+          $(".inner").append(newDivHappy);
+          newDivHappy.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
+          console.log(newDivHappy, "Hello world");
+
+        }
+        addElementHappy();
+      });
   });
