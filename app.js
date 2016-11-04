@@ -63,8 +63,11 @@
           $(".inner").append(newDivHappy);
           newDivHappy.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
           console.log(newDivHappy, "Hello world");
+          var newDiv = document.createElement("iframe");
+          $(".innerMixTape").append(newDiv);
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
 
-        }
+        } 
         addElementHappy();
       });
   });
