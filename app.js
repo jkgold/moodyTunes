@@ -67,7 +67,24 @@
           $(".innerMixTape").append(newDiv);
           newDiv.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
 
-        } 
+        }
         addElementHappy();
+      });
+      //--sad--//
+      $('#sad').on('click', function(event){
+        console.log("clicked");
+        // console.log(event.preventDefault());
+
+         function addElementSad(){
+          var newDivSad = document.createElement("iframe");
+          $(".inner").append(newDivHappy);
+          newDivSad.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
+          console.log(newDivSad, "Hello world");
+          var newDiv = document.createElement("iframe");
+          $(".innerMixTape").append(newDiv);
+          newDiv.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
+
+        }
+        addElementSad();
       });
   });
