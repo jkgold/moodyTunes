@@ -8,7 +8,7 @@
 
         function addElement(){
           var newDiv = document.createElement("iframe");
-          $(".inner").append(newDiv);
+          $(".form").append(newDiv);
           newDiv.setAttribute("src", 'https://embed.spotify.com/?uri=/open.spotify.com/artist/' + addArtistIdToDiv() + 'width="300" height="380" frameborder="0" allowtransparency="true"' );
           console.log(newDiv);
         }
@@ -69,7 +69,9 @@
 
         }
         addElementHappy();
+
       });
+
       //--sad--//
       $('#sad').on('click', function(event){
         console.log("clicked");
@@ -77,11 +79,11 @@
 
          function addElementSad(){
           var newDivSad = document.createElement("iframe");
-          $(".inner").append(newDivHappy);
+          $(".inner").append(newDivSad);
           newDivSad.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
           console.log(newDivSad, "Hello world");
           var newDiv = document.createElement("iframe");
-          $(".innerMixTape").append(newDiv);
+          $(".innerMixTape").append(newDivSad);
           newDiv.setAttribute("src", "https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO");
 
         }
