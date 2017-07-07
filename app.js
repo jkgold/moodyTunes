@@ -1,11 +1,13 @@
 
     $(document).ready(function(){
       //  $('.parallax').parallax();
+      console.log("hello world");
       $('#btn').on('click', function(event){
-        // console.log("");
+        console.log("hello world");
         event.preventDefault();
 
         var userInput = $("#query").val();
+        // console.log(userInput);
         for (var i = 0; i < userInput.length; i++){
           if(userInput[i] === " "){
             userInput = userInput.split(' ').join("+");
@@ -20,10 +22,12 @@
       $.getJSON($userApi)
       .then(function(data){
         var itemsValue = data;
+        console.log(itemValue);
         var topFive = itemsValue.artists.items[0].external_urls;
+        console.log(topFive);
         var playlistTopFive = topFive.spotify;
 
-       console.log(playlistTopFive);
+      //  console.log(playlistTopFive);
        var removeUrl = 'https://open.spotify.com/artist/';
        var returnKey =
       playlistTopFive.replace(removeUrl, '');
